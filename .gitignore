@@ -1,0 +1,9 @@
+node_modules
+.nyc_output
+coverage
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
