@@ -17,7 +17,7 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint lib/**",
+    "lint": "eslint lib/** test/**",
     "test": "npm run lint && npm run prepublish && nyc ava --verbose",
     "prepublish": "babel lib --out-dir=dist --optional=runtime",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
