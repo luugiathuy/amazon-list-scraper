@@ -1,6 +1,6 @@
 {
   "name": "amazon-list-scraper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Scrape items from a public Amazon's list",
   "license": "MIT",
   "repository": "luugiathuy/amazon-list-scraper",
