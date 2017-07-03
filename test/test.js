@@ -22,11 +22,12 @@ test('error if url is not found', t => (
 test('return list of items with title, price and link', t => (
   new AmazonListScraper().scrape(testListURL).then((items) => {
     t.is(items.length, 2);
-    const { title, price, link } = items[0];
+    const { title, price, productId, link } = items[0];
     // eslint-disable-next-line no-script-url
     t.is(title, 'JavaScript: The Good Parts: The Good Parts');
     t.true(!isNaN(parseFloat(price)));
     t.true(link.startsWith('https://amzn.com/dp/B0026OR2ZY'));
+    t.is(productId, 'B0026OR2ZY');
     t.is(items[1].title, 'Clean Code: A Handbook of Agile Software Craftsmanship');
   })
 ));
