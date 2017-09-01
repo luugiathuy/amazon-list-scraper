@@ -12,7 +12,7 @@ $ npm install --save amazon-list-scraper
 ## Usage
 
 ```js
-const AmazonListScraper = require('amazon-list-scraper');
+const AmazonListScraper = require('amazon-list-scraper').default;
 
 const scraper = new AmazonListScraper();
 scraper.scrape('https://www.amazon.com/gp/registry/wishlist/1JMCNHNT959X2')
