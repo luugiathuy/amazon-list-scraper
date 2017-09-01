@@ -10,7 +10,7 @@
     "url": "luugiathuy.com"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "main": "dist/index.js",
   "files": [
@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "got": "^6.7.1"
+    "got": "^6.7.1",
+    "phantom": "^4.0.5"
   },
   "devDependencies": {
     "ava": "^0.18.0",
