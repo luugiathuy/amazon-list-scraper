@@ -48,13 +48,25 @@ test('returns links without query params', t => (
 
 test('scrape next page of the list', t => (
   new AmazonListScraper().scrape(multiPagesListURL).then((items) => {
-    t.is(items.length, 27);
+    t.is(items.length, 26);
   })
 ));
 
 test('return empty list if not an Amazon list', t => (
   new AmazonListScraper().scrape('https://google.com').then((items) => {
     t.is(items.length, 0);
+  })
+));
+
+test('returns list order by price asc when sort option is price-asc', t => (
+  new AmazonListScraper({ sort: 'price-asc' }).scrape(multiPagesListURL).then((items) => {
+    t.is(items[0].title, 'How to Fly a Horse: The Secret History of Creation, Invention, and Discovery');
+  })
+));
+
+test('returns list order by price desc when sort option is price-desc', t => (
+  new AmazonListScraper({ sort: 'price-desc' }).scrape(testListURL).then((items) => {
+    t.is(items[0].title, 'Clean Code: A Handbook of Agile Software Craftsmanship');
   })
 ));
 
